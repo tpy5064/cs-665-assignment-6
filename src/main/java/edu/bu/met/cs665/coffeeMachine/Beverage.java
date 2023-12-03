@@ -1,10 +1,11 @@
 package edu.bu.met.cs665.coffeeMachine;
 
-public abstract class Beverage {
+
+public class Beverage {
 
     private int numMilk;
     private int numSugar;
-    //Flexible way to implement beverage type, prevents duplicate code of multiple classes of beverages.
+    private BeverageType type;
 
     public int getNumMilk() {
         return numMilk;
@@ -14,11 +15,15 @@ public abstract class Beverage {
         return numSugar;
     }
 
-    public Beverage(int numMilk, int numSugar) {
+    public Beverage(BeverageType type, int numMilk, int numSugar) {
         this.numMilk = numMilk;
         this.numSugar = numSugar;
+        this.type = type;
     }
 
-    public abstract String info();
+    public String info() {
+        return "Made "+ this.type.getName() + " with " + getNumMilk() +
+                " units of milk and " + getNumSugar() + " units of sugar.";
+    }
 
 }

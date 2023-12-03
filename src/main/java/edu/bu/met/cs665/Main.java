@@ -9,8 +9,8 @@
 package edu.bu.met.cs665;
 
 import edu.bu.met.cs665.coffeeMachine.Beverage;
+import edu.bu.met.cs665.coffeeMachine.BeverageType;
 import edu.bu.met.cs665.coffeeMachine.CoffeeMachine;
-import edu.bu.met.cs665.example1.Person;
 import java.util.ArrayList;
 
 /**
@@ -30,9 +30,9 @@ public class Main {
     //List of beverages to make
     ArrayList<Beverage> beverages = new ArrayList<>();
 
-    beverages.add(coffeeMachine.serveBeverage("Espresso", 0, 0));
-    beverages.add(coffeeMachine.serveBeverage("Black Tea", 1, 1));
-    beverages.add(coffeeMachine.serveBeverage("Latte Macchiato", 3, 3));
+    beverages.add(coffeeMachine.serveBeverage(BeverageType.ESPRESSO, 0, 0));
+    beverages.add(coffeeMachine.serveBeverage(BeverageType.AMERICANO, 1, 1));
+    beverages.add(coffeeMachine.serveBeverage(BeverageType.LATTE_MACCHIATO, 3, 3));
 
     for (Beverage b : beverages) {
       if (b != null) {
@@ -45,16 +45,6 @@ public class Main {
 
 
 
-  }
-
-  /**
-   * This method performs XYZ and returns String.
-   *
-   * @return String
-   */
-  private String doIt() {
-    Person student = new Person("John", "Doe");
-    return student.getLastName() + ',' + student.getFirstName();
   }
 
 }
