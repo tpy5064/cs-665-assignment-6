@@ -11,7 +11,7 @@ Refactoring Assignment 1 to use the Factory pattern, and making changes to code 
 adopting the open for extension, closed for modification rule.
 
 # GitHub Repository Link:
-https://github.com/tpy5064/cs-665-assignment-1
+https://github.com/tpy5064/cs-665-assignment-6
 
 # Implementation Description 
 The following refactoring changes has been made:
