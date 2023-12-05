@@ -1,29 +1,19 @@
 /**
- * Name: FIRST_NAME LAST_NAME
+ * Name: Tianqi Yang
  * Course: CS-665 Software Designs & Patterns
- * Date: MM/DD/YYYY
+ * Date: 12/05/2023
  * File Name: Main.java
- * Description: Write a description for this class
+ * Description: The main class and entry point for the project.
  */
 
 package edu.bu.met.cs665;
 
-import edu.bu.met.cs665.coffeeMachine.Beverage;
-import edu.bu.met.cs665.coffeeMachine.BeverageType;
+import edu.bu.met.cs665.beverages.Beverage;
+import edu.bu.met.cs665.beverages.BeverageType;
 import edu.bu.met.cs665.coffeeMachine.CoffeeMachine;
 import java.util.ArrayList;
 
-/**
- * This is the Main class.
- */
 public class Main {
-
-  /**
-   * A main method to run examples.
-   * You may use this method for development purposes as you start building your
-   * assignments/final project.  This could prove convenient to test as you are developing.
-   * However, please note that every assignment/final projects requires JUnit tests.
-   */
   public static void main(String[] args) {
     CoffeeMachine coffeeMachine = new CoffeeMachine();
 
@@ -41,9 +31,6 @@ public class Main {
         System.err.println("Invalid beverage!");
       }
     }
-
-
-
 
   }
 

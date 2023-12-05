@@ -2,27 +2,33 @@
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
 | Name         | Tianqi Yang                |
-| Date         | 09/26/2000                 |
+| Date         | 12/05/2000                 |
 | Course       | Fall                       |
-| Assignment # | 1                          |
+| Assignment # | 6                          |
 
 # Assignment Overview
-A coffee machine that can serve beverages flexibly with condiments (milk and sugar). The condiments cannot exceed 3
-units in both sugar and milk.
+Refactoring Assignment 1 to use the Factory pattern, and making changes to code readability, cleanliness and 
+adopting the open for extension, closed for modification rule.
 
 # GitHub Repository Link:
 https://github.com/tpy5064/cs-665-assignment-1
 
 # Implementation Description 
-- Used abstract Beverage type so that new drinks can directly extend this class to prevent repeated code
-- New drinks can be added to the beverages package and call the super() class, only modification needed is to the 
-info() method where the name of the beverage is modified.
-- Class structure is relatively simple and the string representation of the beverage objects are all done through
-info() method, and inherits milk and sugar count through the superclass.
-- CoffeeMachine class handles logic of which drink to produce via switch case statement, and handles the quantity of
-condiments requested. If the values are negative or exceeds 3, null value is returned. If drink type is illegal, null
-is returned.
-- Main class prints drinks served on the condition that the beverage is not null, preventing NullPointerException.
+The following refactoring changes has been made:
+1. Instead of using an abstract Beverage class and creating a new Beverage class for each type of beverage
+   (i.e. Americano, Latte Macchiato etc.), the Beverage class has been updated to be similar to how a factory object
+is designed, having an info() method that combines its private fields for information. All previous concrete
+implementations of drinks and its classes has been removed, complying with the DRY principle.
+2. BeverageFactory class has been created to serve as the factory serving the concrete Beverage objects. Currently,
+it has no extra behavior as it is open for future extension, as more logic can be added for more complex conditions.
+3. CoffeeMachine has been updated, where the long switch statement is removed as that functionality is no longer needed,
+and is handled by the Beverage class itself. This makes the code cleaner and easier to read.
+4. BeverageType enum class has been added to ensure type safety, and hence no invalid drink can be created on accident
+by the user. All type errors will be caught at compile time, unlike the previous implementation that used a string and 
+is checked within the long switch statement within the CoffeeMachine class.
+5. Improved readability in CoffeeMachine class, extracting the conditional statement logic into another private method
+called isInvalidCondimentVal(). Constant values for max and min condiment count have been extracted to **private static
+final** fields, removing the hard-coded integer value that was used in the previous version.
 
 
 # Maven Commands

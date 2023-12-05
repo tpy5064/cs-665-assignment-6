@@ -1,5 +1,12 @@
-package edu.bu.met.cs665.coffeeMachine;
+/**
+ * Name: Tianqi Yang
+ * Course: CS-665 Software Designs & Patterns
+ * Date: 12/05/2023
+ * File Name: Beverage.java
+ * Description: This is the Beverage class, holding a BeverageType, its own values for condiment count.
+ */
 
+package edu.bu.met.cs665.beverages;
 
 public class Beverage {
 
@@ -22,6 +29,10 @@ public class Beverage {
     }
 
     public String info() {
+        /**
+         * This method compiles the object's private fields into a string
+         * @return the string representation of the Beverage object.
+         */
         return "Made "+ this.type.getName() + " with " + getNumMilk() +
                 " units of milk and " + getNumSugar() + " units of sugar.";
     }

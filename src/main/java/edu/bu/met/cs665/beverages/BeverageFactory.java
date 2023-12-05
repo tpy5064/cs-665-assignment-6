@@ -1,7 +1,13 @@
-package edu.bu.met.cs665.beverages;
+/**
+ * Name: Tianqi Yang
+ * Course: CS-665 Software Designs & Patterns
+ * Date: 12/05/2023
+ * File Name: BeverageFactory.java
+ * Description: This class handles the creation of concrete beverage objects. This class currently does not have
+ * extra functionality for the createBeverage() method. This is for future extension of functionality.
+ */
 
-import edu.bu.met.cs665.coffeeMachine.Beverage;
-import edu.bu.met.cs665.coffeeMachine.BeverageType;
+package edu.bu.met.cs665.beverages;
 
 public class BeverageFactory {
 

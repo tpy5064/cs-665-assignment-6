@@ -1,14 +1,12 @@
 package edu.bu.met.cs665;
 
 
-import edu.bu.met.cs665.coffeeMachine.Beverage;
-import edu.bu.met.cs665.coffeeMachine.BeverageType;
+import edu.bu.met.cs665.beverages.Beverage;
+import edu.bu.met.cs665.beverages.BeverageType;
 import edu.bu.met.cs665.coffeeMachine.CoffeeMachine;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-
-import java.util.ArrayList;
 
 public class TestCoffeeMachine {
 
