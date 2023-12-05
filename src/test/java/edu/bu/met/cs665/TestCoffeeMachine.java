@@ -1,5 +1,13 @@
 package edu.bu.met.cs665;
 
+/**
+ * Name: Tianqi Yang
+ * Course: CS-665 Software Designs & Patterns
+ * Date: 12/05/2023
+ * File Name: TestCoffeeMachine.java
+ * Description: The test class for testing the validity of the CoffeeMachine implementation
+ */
+
 
 import edu.bu.met.cs665.beverages.Beverage;
 import edu.bu.met.cs665.beverages.BeverageType;
